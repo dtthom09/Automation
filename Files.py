@@ -28,3 +28,7 @@ try:
 except KeyboardInterrupt:
     observer.stop()
 observer.join()
+
+# TODO: make test download files
+# TODO: sort file directories by type
+# TODO: rename files
