@@ -17,6 +17,7 @@ class MyHandler(FileSystemEventHandler):
 
 folder_to_track = r'C:\Users\Dylan\Downloads'
 folder_destination = r'C:\Users\Dylan\Downloads2'
+photo_folder_destination = r'C:\Users\Dylan\DownloadPhotos'
 event_handler = MyHandler()
 observer = Observer()
 observer.schedule(event_handler, folder_to_track, recursive=True)
@@ -28,6 +29,9 @@ try:
 except KeyboardInterrupt:
     observer.stop()
 observer.join()
+
+# TODO: when new pictures are downloaded it is saving them as tmp (temporary file generally used in cache)
+#       files in new folder instead of jpg
 
 # TODO: make test download files
 # TODO: sort file directories by type
